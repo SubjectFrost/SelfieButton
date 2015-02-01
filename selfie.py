@@ -23,7 +23,6 @@ num_from = f.readline().rstrip()
  
 client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
  
-message = client.messages.create(body="Selfie!",
-    to=num_to, 
+message = client.messages.create(to=num_to, 
     from_=num_from, 
     media_url=image_url)
