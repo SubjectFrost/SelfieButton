@@ -1,0 +1,5 @@
+#!/bin/bash
+
+output=$(("${@:1}") | tr '\n' ' ')
+
+sed -i '1s/.*/$output/' file.txt
